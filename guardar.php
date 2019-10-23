@@ -17,7 +17,13 @@
   //hacemos la sentencia sql
   $sql="INSERT INTO datos VALUES ('$nombre', '$edad', '$correo')";
   //ejecutamos la sentencia sql
-  
+  $ejecutar=mysql_query($sql);
+  //verificamos la ejecuciónote
+  if (!$ejecutar) {
+    echo "Hubo un error que mal";
+  }else{
+    echo "Datos Guardados Correctamente<br><a href ='index.html'>Volver</a>";
+  }
 
 
  ?>
